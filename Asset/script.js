@@ -19,7 +19,7 @@ function dayRequest(){
   var fiveDayURL = "api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid= " + APIkey;
   console.log("citySearch");
 
-// AJAX request, go GET 
+// AJAX request, go GET the info that the API 
 $.ajax({
   url: currentDayURL,
   method: "GET"
