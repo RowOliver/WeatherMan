@@ -1,7 +1,9 @@
 //create lets for all actions that are required 
 let city=" ";
 let url=" ";
-let APIkey=" ";
+let APIkey="";
+
+
 let queryURL =" ";
 let newURL =" ";
 let citiesDiv = document.getElementById("searched-cities");
@@ -48,7 +50,7 @@ function listFunction() {
   $(".list-button").on("click", function(event){
     event.preventDefault();
     city = $(this).text().trim();
-    dualCalls();
+    twoCalls();
 
   })
 }
@@ -75,9 +77,10 @@ function searchFunction() {
 //call the api
 function twoCalls(){
 
-  url = "https://api.openweathermap.org/data/2.5/forecast?q=";
+  url = "https://api.openweathermap.org/data/2.5/weather?q=";
   newURL = "https://api.openweathermap.org/data/2.5/weather?q=";
-  APIkey = "&apid=cfbaa5f2a80aea0327fb725749599ac5";
+  APIkey = "cfbaa5f2a80aea0327fb725749599ac5";
+
 
   queryURL = url + city + APIkey;
     current_weather_url = newURL + city + APIkey;
