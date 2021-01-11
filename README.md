@@ -7,4 +7,4 @@ Welcome to the Weather Man application! WHere you can check the weather in a cit
 Installation:
 There is no installation and there is no specific audience. It is meant for anyone to use for a variety of purposes. 
 
-Images: 
+![screeenshot](./Images/weather.png)
