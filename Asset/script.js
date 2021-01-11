@@ -1,11 +1,12 @@
 //create lets for all actions that are required 
 let city=" ";
-let url=" ";
+let currentURL=" ";
+let fiveDayURL =" ";
 let APIkey= " ";
 
 
 let queryURL =" ";
-let newURL =" ";
+
 let citiesDiv = document.getElementById("searched-cities");
 let cities = [ ];
  
@@ -77,21 +78,22 @@ function searchFunction() {
 //call the api
 function twoCalls(){
 
-  url = "https://api.openweathermap.org/data/2.5/forecast?q=";    
-  newURL = "https://api.openweathermap.org/data/2.5/weather?q=";
+  currentURL = "https://api.openweathermap.org/data/2.5/forecast?q=";    
+  fiveDayURL = "https://api.openweathermap.org/data/2.5/weather?q=";
   APIkey = "&appid=cfbaa5f2a80aea0327fb725749599ac5";
   
 
 
 
-  queryURL = url + city + APIkey;
-    current_weather_url = newURL + city + APIkey;
+  queryURL = currentURL + city + APIkey;
+    current_weather_url = fiveDayURL + city + APIkey;
 
     $("#city-name").text("Today's Weather in" + city);
     $.ajax({
       url: queryURL,
       method: "GET",
-
+      
+      
     }).then(function(response){
 
       let currentDay_number = 0;
